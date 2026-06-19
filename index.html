@@ -64,7 +64,8 @@
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <a href="#inicio" class="flex items-center space-x-2">
                     <span class="font-serif text-2xl font-bold tracking-tight text-brand-800">
-                        Sua <span class="text-brand-500 italic">Parceira</span> Digital
+                        Ensigna <small class="text-sm font-normal text-neutral-600 ml-2">Por Emily Albuquerque</small>
+                        <br> Sua <span class="text-brand-500 italic">Parceira</span> Digital
                     </span>
                 </a>
 
@@ -611,7 +612,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-brand-400">Envie um e-mail</p>
-                                    <p class="font-medium text-white">ola.suaassistente@contato.com</p>
+                                    <p class="font-medium text-white">emlyalbuquerque@icloud.com</p>
                                 </div>
                             </div>
 
@@ -621,7 +622,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-brand-400">Fale comigo pelo WhatsApp</p>
-                                    <p class="font-medium text-white">+55 (11) 99999-9999</p>
+                                    <p class="font-medium text-white">+55 (85) 99736-7028</p>
                                 </div>
                             </div>
                         </div>
@@ -697,7 +698,7 @@
 
         <!-- WhatsApp Flutuante -->
         <a
-            href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá! Gostaria de entender mais sobre seus serviços como Assistente Virtual."
+            href="https://api.whatsapp.com/send?phone=5585997367028&text=Olá! Gostaria de entender mais sobre seus serviços como Assistente Virtual."
             target="_blank"
             rel="noopener noreferrer"
             class="fixed bottom-6 right-6 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-600 hover:scale-105 transition-all z-40 flex items-center justify-center"
@@ -762,7 +763,7 @@
                     `📊 *Investimento estimado:* R$ ${total}/mês\n\n` +
                     `Gostaria de agendar meu diagnóstico gratuito de 15 minutos.`;
 
-                const url = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent(mensagem)}`;
+                const url = `https://api.whatsapp.com/send?phone=5585997367028&text=${encodeURIComponent(mensagem)}`;
                 window.open(url, '_blank');
             }
 
@@ -771,7 +772,7 @@
                 e.preventDefault();
 
                 const nome = this.querySelector('input[placeholder*="Maria"]').value;
-                const whatsapp = this.querySelector('input[placeholder*="(11)"]').value;
+                const whatsapp = this.querySelector('input[placeholder*="(85)"]').value;
                 const email = this.querySelector('input[type="email"]').value;
                 const mensagemAdicional = this.querySelector('textarea').value;
 
@@ -788,7 +789,7 @@
                     `🔥 *Áreas de Necessidade:* ${dores.join(', ') || 'Não especificado'}\n\n` +
                     `💬 *Mensagem:* ${mensagemAdicional || 'Sem mensagens adicionais.'}`;
 
-                const url = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent(mensagemWhats)}`;
+                const url = `https://api.whatsapp.com/send?phone=5585997367028&text=${encodeURIComponent(mensagemWhats)}`;
                 window.open(url, '_blank');
             });
         </script>
