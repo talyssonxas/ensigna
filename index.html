@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ensigna | Soluções Digitais & Administrativas</title>
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Fontes do Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Lucide Icons para ícones modernos -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: {
+                                50: '#FAF8F5',
+                                100: '#F5ECE1',
+                                200: '#E6D3BE',
+                                300: '#D2B496',
+                                400: '#BD9673',
+                                500: '#A4764F', // Cor principal (Tom marrom/terroso sofisticado)
+                                600: '#8A5E3A',
+                                700: '#704B2E',
+                                800: '#543722',
+                                900: '#3D2818',
+                            },
+                            neutral: {
+                                950: '#17110C',
+                            },
+                        },
+                        fontFamily: {
+                            sans: ['Plus Jakarta Sans', 'sans-serif'],
+                            serif: ['Playfair Display', 'serif'],
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            .glass {
+                background: rgba(250, 248, 245, 0.85);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+            }
+        </style>
+    </head>
+
+    <body class="bg-brand-50 text-neutral-800 font-sans antialiased overflow-x-hidden">
+        <!-- Header / Navbar -->
+        <header class="fixed top-0 left-0 w-full z-50 glass border-b border-brand-100 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="#inicio" class="flex items-center space-x-2">
+                    <span class="font-serif text-2xl font-bold tracking-tight text-brand-800">
+                        Sua <span class="text-brand-500 italic">Parceira</span> Digital
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-800">
+                    <a href="#inicio" class="hover:text-brand-500 transition-colors">Início</a>
+                    <a href="#sobre" class="hover:text-brand-500 transition-colors">Sobre Mim</a>
+                    <a href="#servicos" class="hover:text-brand-500 transition-colors">Serviços</a>
+                    <a href="#orcamento" class="hover:text-brand-500 transition-colors">Calculadora de Planos</a>
+                    <a
+                        href="#contato"
+                        class="bg-brand-500 text-white px-5 py-2.5 rounded-full hover:bg-brand-600 transition-all shadow-md hover:shadow-brand-200"
+                        >Falar Comigo</a
+                    >
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-btn" class="md:hidden text-brand-800 p-2 focus:outline-none" aria-label="Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer -->
+            <div id="mobile-menu" class="hidden md:hidden bg-brand-50 border-b border-brand-100 px-6 py-6 space-y-4 shadow-xl">
+                <a href="#inicio" class="block font-medium text-brand-800 hover:text-brand-500 py-2">Início</a>
+                <a href="#sobre" class="block font-medium text-brand-800 hover:text-brand-500 py-2">Sobre Mim</a>
+                <a href="#servicos" class="block font-medium text-brand-800 hover:text-brand-500 py-2">Serviços</a>
+                <a href="#orcamento" class="block font-medium text-brand-800 hover:text-brand-500 py-2">Calculadora de Planos</a>
+                <a
+                    href="#contato"
+                    class="block text-center bg-brand-500 text-white px-5 py-3 rounded-full font-semibold hover:bg-brand-600 transition-colors"
+                    >Falar Comigo</a
+                >
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="inicio" class="pt-32 pb-20 md:py-40 flex items-center relative overflow-hidden">
+            <!-- Elementos decorativos de fundo -->
+            <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-100 opacity-60 blur-3xl"></div>
+            <div class="absolute top-1/2 -left-40 w-96 h-96 rounded-full bg-brand-200 opacity-30 blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Texto -->
+                <div class="lg:col-span-7 space-y-8 z-10 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center space-x-2 bg-brand-100/70 border border-brand-200 px-4 py-2 rounded-full text-brand-700 text-sm font-semibold tracking-wide"
+                    >
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Disponível para novos projetos digitais</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-brand-900 leading-[1.1] font-bold">
+                        Sua rotina organizada. <br />
+                        Seu negócio em <span class="text-brand-500 italic">crescimento</span>.
+                    </h1>
+
+                    <p class="text-lg text-brand-700 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Delegue as tarefas operacionais, financeiras e administrativas para quem entende do mercado digital. Ganhe mais
+                        tempo livre para focar na estratégia e faturamento da sua empresa.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a
+                            href="#servicos"
+                            class="w-full sm:w-auto bg-brand-500 text-white text-center px-8 py-4 rounded-full font-semibold hover:bg-brand-600 transition-all shadow-lg hover:shadow-brand-200/50 flex items-center justify-center space-x-2 group"
+                        >
+                            <span>Ver meus Serviços</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="#contato" class="w-full sm:w-auto border border-brand-300 text-brand-800 text-center px-8 py-4 rounded-full font-semibold hover:bg-brand-100 transition-all"
+                            >Solicitar Orçamento</a
+                        >
+                    </div>
+
+                    <!-- Mini Stats / Diferenciais -->
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-brand-200/60 text-left max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl font-bold font-serif text-brand-800">100%</div>
+                            <div class="text-xs text-brand-600 font-medium">Digital e Flexível</div>
+                        </div>
+
+                        <div>
+                            <div class="text-2xl font-bold font-serif text-brand-800">4+</div>
+                            <div class="text-xs text-brand-600 font-medium">Áreas de Atuação</div>
+                        </div>
+
+                        <div>
+                            <div class="text-2xl font-bold font-serif text-brand-800">24h</div>
+                            <div class="text-xs text-brand-600 font-medium">Resposta Ágil</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagem Destacada -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <!-- Frame decorativo com bordas elegantes -->
+                    <div class="absolute inset-0 bg-brand-300/20 rounded-[2.5rem] transform rotate-3 scale-102 blur-sm"></div>
+                    <div class="relative w-full max-w-[400px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
+                        <!-- Foto Principal Atendimento -->
+                        <img
+                            src="https://raw.githubusercontent.com/gregoryalves/images/main/image-1.png"
+                            alt="Assistente Virtual Profissional"
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop';"
+                        />
+
+                        <!-- Floating Card -->
+                        <div class="absolute bottom-6 left-6 right-6 glass p-4 rounded-2xl border border-white/40 flex items-center space-x-3">
+                            <div class="bg-emerald-100 p-2 rounded-xl text-emerald-600">
+                                <i data-lucide="headset" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-600 uppercase font-bold tracking-wider">Atendimento Humanizado</p>
+                                <p class="text-sm font-semibold text-brand-900">Suporte Profissional & Conexão</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mim Section -->
+        <section id="sobre" class="py-24 bg-brand-100/50 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <!-- Imagens Colagem Lateral Esquerda -->
+                    <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4]">
+                                <img
+                                    src="https://raw.githubusercontent.com/gregoryalves/images/main/image-2.png"
+                                    alt="Assistente Virtual Analítica"
+                                    class="w-full h-full object-cover"
+                                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580894732444-8fecef2271ff?q=80&w=600&auto=format&fit=crop';"
+                                />
+                            </div>
+
+                            <div class="rounded-2xl overflow-hidden shadow-md bg-brand-200 flex flex-col justify-center p-6 text-brand-800 aspect-square">
+                                <i data-lucide="quote" class="w-10 h-10 text-brand-500 mb-3 opacity-60"></i>
+                                <p class="text-sm italic font-serif">"O segredo da produtividade é colocar cada processo em seu devido lugar."</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 pt-8">
+                            <div class="rounded-2xl overflow-hidden shadow-md aspect-square bg-brand-300">
+                                <img
+                                    src="https://raw.githubusercontent.com/gregoryalves/images/main/image-3.png"
+                                    alt="Trabalho no Notebook"
+                                    class="w-full h-full object-cover"
+                                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop';"
+                                />
+                            </div>
+
+                            <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4]">
+                                <img
+                                    src="https://raw.githubusercontent.com/gregoryalves/images/main/image-4.png"
+                                    alt="Assistente Virtual Sorridente"
+                                    class="w-full h-full object-cover"
+                                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop';"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conteúdo Sobre Mim -->
+                    <div class="lg:col-span-6 space-y-8">
+                        <div>
+                            <span class="text-brand-500 font-semibold tracking-wider text-sm uppercase">Minha Trajetória</span>
+                            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-900 mt-2">Apoio estratégico para liberar seu potencial máximo</h2>
+                        </div>
+
+                        <p class="text-brand-700 leading-relaxed font-light text-base">
+                            Como profissional multifacetada atuando no mercado digital, percebi que o maior gargalo dos empreendedores é a
+                            sobrecarga operacional. Quando você cuida de tudo sozinha, não sobra tempo para pensar estrategicamente.
+                        </p>
+
+                        <p class="text-brand-700 leading-relaxed font-light text-base">
+                            Minha missão é trazer <strong>organização, controle de fluxo de caixa, agendamento estruturado e otimização
+                            operacional</strong> direto para o seu negócio. Com um background dinâmico que une a atenção administrativa à
+                            frieza e rigor do controle financeiro, entrego soluções personalizadas com o carinho e o profissionalismo que a sua
+                            marca merece.
+                        </p>
+
+                        <!-- Selo de Valores -->
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-brand-200 text-brand-700 p-2.5 rounded-xl">
+                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-900 text-sm">Confidencialidade</h4>
+                                    <p class="text-xs text-brand-600">Seus dados e processos protegidos com sigilo.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-brand-200 text-brand-700 p-2.5 rounded-xl">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-900 text-sm">Pontualidade</h4>
+                                    <p class="text-xs text-brand-600">Entregas e rotinas executadas no prazo correto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Section -->
+        <section id="servicos" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-brand-500 font-semibold tracking-wider text-sm uppercase">O que eu faço</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-900">Serviços sob medida para o seu dia a dia profissional</h2>
+                    <p class="text-brand-600 font-light">
+                        Explore os pilares de suporte digital que eu ofereço. Você pode contratar por categorias ou montar um escopo
+                        integrado ideal para o seu momento.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Operacional -->
+                    <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white transition-all">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-brand-900 mb-4">Operacional</h3>
+                        <ul class="space-y-3 text-sm text-brand-700">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                                <span>Gestão de WhatsApp</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                                <span>Gestão de e-mails</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                                <span>Pesquisas on-line</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                                <span>Prospecção comercial</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                                <span>Suporte em direct/comentários</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                                <span>Gestão de redes sociais</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                                <span>Suporte em softwares diversos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Financeiro -->
+                    <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                            <i data-lucide="dollar-sign" class="w-6 h-6"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-brand-900 mb-4">Financeiro</h3>
+                        <ul class="space-y-3 text-sm text-brand-700">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                <span>Orçamentos em geral</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                <span>Emissão de notas fiscais</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                <span>Contas a pagar e receber</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                <span>Planilhas de controle financeiro</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                <span>Cobranças & negociações</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                <span>Envio e emissão de boletos</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                <span>Envio e recebimento de Pix</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Administrativo -->
+                    <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                            <i data-lucide="folder-kanban" class="w-6 h-6"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-brand-900 mb-4">Administrativo</h3>
+                        <ul class="space-y-3 text-sm text-brand-700">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                                <span>Criação de planilhas</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                                <span>Agendamento de entrevistas</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                                <span>Gestão de agenda executiva</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                                <span>Solicitação & controle de docs</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                                <span>Organização de arquivos digitais</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                                <span>Preenchimento & envio de contratos</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                                <span>Formulários e cadastros</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Assistência Pessoal -->
+                    <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all">
+                            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-brand-900 mb-4">Assistência</h3>
+                        <ul class="space-y-3 text-sm text-brand-700">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i>
+                                <span>Compras on-line de marcas e lojas</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i>
+                                <span>Supermercado on-line integrado</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i>
+                                <span>Pesquisas de melhores preços</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i>
+                                <span>Suporte logístico de entrega</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-500"></i>
+                                <span>Gestão de assinaturas recorrentes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Interativa: Calculadora de Orçamento Estimado -->
+        <section id="orcamento" class="py-24 bg-brand-100/35 border-y border-brand-100">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12 space-y-4">
+                    <span class="text-brand-500 font-semibold tracking-wider text-sm uppercase">Simulação Rápida</span>
+                    <h2 class="text-3xl font-serif font-bold text-brand-900">Monte seu Pacote Personalizado</h2>
+                    <p class="text-brand-600 font-light text-sm">
+                        Selecione os blocos de serviço que você precisa e tenha uma estimativa prévia do valor mensal para
+                        começarmos o projeto!
+                    </p>
+                </div>
+
+                <!-- Calculadora -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-xl grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <!-- Escolha de Módulos -->
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-brand-900 border-b border-brand-100 pb-2">Selecione as Demandas:</h4>
+
+                        <label class="flex items-center justify-between p-3 rounded-2xl border border-brand-100 hover:bg-brand-50 cursor-pointer transition-all">
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" value="350" class="service-checkbox w-5 h-5 accent-brand-500 rounded" checked />
+                                <div>
+                                    <p class="text-sm font-semibold text-brand-900">Suporte Operacional</p>
+                                    <p class="text-xs text-brand-600">WhatsApp, e-mails & redes sociais</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-brand-700">R$ 350/mês</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-3 rounded-2xl border border-brand-100 hover:bg-brand-50 cursor-pointer transition-all">
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" value="450" class="service-checkbox w-5 h-5 accent-brand-500 rounded" />
+                                <div>
+                                    <p class="text-sm font-semibold text-brand-900">Controle Financeiro</p>
+                                    <p class="text-xs text-brand-600">Faturamento, DFC, NFs & Conciliação</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-brand-700">R$ 450/mês</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-3 rounded-2xl border border-brand-100 hover:bg-brand-50 cursor-pointer transition-all">
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" value="300" class="service-checkbox w-5 h-5 accent-brand-500 rounded" />
+                                <div>
+                                    <p class="text-sm font-semibold text-brand-900">Organização Administrativa</p>
+                                    <p class="text-xs text-brand-600">Agendas, documentos, planilhas & contratos</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-brand-700">R$ 300/mês</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-3 rounded-2xl border border-brand-100 hover:bg-brand-50 cursor-pointer transition-all">
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" value="200" class="service-checkbox w-5 h-5 accent-brand-500 rounded" />
+                                <div>
+                                    <p class="text-sm font-semibold text-brand-900">Assistência Pessoal</p>
+                                    <p class="text-xs text-brand-600">Compras corporativas e pessoais online</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-brand-700">R$ 200/mês</span>
+                        </label>
+                    </div>
+
+                    <!-- Resultado -->
+                    <div class="bg-brand-50 p-6 rounded-2xl border border-brand-100 flex flex-col justify-between h-full">
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-brand-900 text-lg">Resumo do Plano</h4>
+                            <div class="text-xs text-brand-600 space-y-1">
+                                <p>✔ Suporte semanal garantido</p>
+                                <p>✔ Relatórios de progresso das demandas</p>
+                                <p>✔ Alinhamento estratégico semanal por chamada</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-8 border-t border-brand-200 mt-6">
+                            <p class="text-xs text-brand-600 uppercase tracking-wider font-bold">Investimento Estimado</p>
+                            <div class="flex items-baseline space-x-1 mt-1">
+                                <span class="text-lg font-bold text-brand-800">R$</span>
+                                <span id="total-price" class="text-4xl font-extrabold text-brand-900">350</span>
+                                <span class="text-brand-600 text-sm">/mês</span>
+                            </div>
+                            <p class="text-[10px] text-brand-500 mt-2">Valores sujeitos a alteração conforme escopo final customizado.</p>
+                        </div>
+
+                        <button
+                            onclick="enviarOrcamentoWhatsApp()"
+                            class="w-full bg-brand-500 hover:bg-brand-600 text-white font-semibold py-3.5 px-4 rounded-xl mt-6 transition-all shadow-md flex items-center justify-center space-x-2"
+                        >
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Contratar este Escopo</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que me escolher? -->
+        <section class="py-24 max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-brand-500 font-semibold tracking-wider text-sm uppercase">Mais que uma Assistente</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-900 mt-2">Diga adeus ao caos administrativo e foque no que importa</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-200 flex items-center justify-center text-brand-700 shrink-0">
+                                <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-900 text-lg">Processos Simplificados</h4>
+                                <p class="text-brand-700 text-sm font-light leading-relaxed mt-1">Padronização de arquivos e respostas rápidas que deixam seus clientes encantados e sua rotina leve.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-200 flex items-center justify-center text-brand-700 shrink-0">
+                                <i data-lucide="trending-up" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-900 text-lg">Alavancagem Comercial</h4>
+                                <p class="text-brand-700 text-sm font-light leading-relaxed mt-1">Prospecção constante para alimentar seu funil de vendas enquanto eu respondo seu direct e comentários.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-200 flex items-center justify-center text-brand-700 shrink-0">
+                                <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-900 text-lg">Finanças Saudáveis</h4>
+                                <p class="text-brand-700 text-sm font-light leading-relaxed mt-1">Contas organizadas, fluxo de caixa atualizado e lembretes amigáveis de cobrança sem desconforto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagem Mockup / Trabalho -->
+                <div class="relative">
+                    <div class="absolute -bottom-6 -left-6 w-72 h-72 rounded-full bg-brand-200/50 blur-2xl"></div>
+                    <div class="relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl">
+                        <img src="https://raw.githubusercontent.com/gregoryalves/images/main/image-4.png" alt="Gestão Organizada" class="w-full object-cover aspect-[4/3]" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop';" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="py-24 bg-brand-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(189,150,115,0.15),transparent)]"></div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                    <!-- Informações -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="space-y-4">
+                            <span class="text-brand-300 font-semibold tracking-wider text-sm uppercase">Comece Agora</span>
+                            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">Pronta para delegar e crescer?</h2>
+                            <p class="text-brand-200 font-light text-base leading-relaxed">
+                                Preencha os campos ao lado com suas principais dores operacionais e retornarei o contato em até 24h úteis para agendarmos um diagnóstico rápido gratuito de 15 minutos.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 text-sm text-brand-200 font-light">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-brand-800 p-3 rounded-xl text-brand-300">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-brand-400">Envie um e-mail</p>
+                                    <p class="font-medium text-white">ola.suaassistente@contato.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-brand-800 p-3 rounded-xl text-brand-300">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-brand-400">Fale comigo pelo WhatsApp</p>
+                                    <p class="font-medium text-white">+55 (11) 99999-9999</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulário -->
+                    <div class="lg:col-span-7">
+                        <form id="contact-form" class="bg-white p-8 sm:p-10 rounded-3xl border border-brand-800 shadow-2xl text-neutral-800 space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-brand-800 uppercase">Seu Nome *</label>
+                                    <input type="text" required placeholder="Ex: Maria Souza" class="w-full px-4 py-3.5 rounded-xl border border-brand-200 focus:ring-2 focus:ring-brand-400 focus:outline-none transition-all" />
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-brand-800 uppercase">Seu Whatsapp *</label>
+                                    <input type="tel" required placeholder="Ex: (11) 98888-8888" class="w-full px-4 py-3.5 rounded-xl border border-brand-200 focus:ring-2 focus:ring-brand-400 focus:outline-none transition-all" />
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-brand-800 uppercase">Seu E-mail *</label>
+                                <input type="email" required placeholder="Ex: contato@suaempresa.com" class="w-full px-4 py-3.5 rounded-xl border border-brand-200 focus:ring-2 focus:ring-brand-400 focus:outline-none transition-all" />
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-brand-800 uppercase">Quais áreas mais precisam de ajuda hoje?</label>
+                                <div class="grid grid-cols-2 gap-3 pt-1">
+                                    <label class="flex items-center space-x-2 text-sm text-brand-800 cursor-pointer">
+                                        <input type="checkbox" name="pain" value="Operacional" class="accent-brand-500 rounded" />
+                                        <span>Operacional</span>
+                                    </label>
+
+                                    <label class="flex items-center space-x-2 text-sm text-brand-800 cursor-pointer">
+                                        <input type="checkbox" name="pain" value="Financeiro" class="accent-brand-500 rounded" />
+                                        <span>Financeiro</span>
+                                    </label>
+
+                                    <label class="flex items-center space-x-2 text-sm text-brand-800 cursor-pointer">
+                                        <input type="checkbox" name="pain" value="Administrativo" class="accent-brand-500 rounded" />
+                                        <span>Administrativo</span>
+                                    </label>
+
+                                    <label class="flex items-center space-x-2 text-sm text-brand-800 cursor-pointer">
+                                        <input type="checkbox" name="pain" value="Assistência Geral" class="accent-brand-500 rounded" />
+                                        <span>Assistência</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-brand-800 uppercase">Mensagem Adicional / Desafio Atual</label>
+                                <textarea rows="4" placeholder="Conte brevemente como posso ajudar o seu negócio hoje..." class="w-full px-4 py-3.5 rounded-xl border border-brand-200 focus:ring-2 focus:ring-brand-400 focus:outline-none transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-semibold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-brand-200 flex items-center justify-center space-x-2">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                                <span>Enviar Solicitação de Orçamento</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-brand-50 border-t border-brand-100 py-12 text-center text-brand-600 text-sm">
+            <div class="max-w-7xl mx-auto px-6 space-y-4">
+                <p class="font-serif text-lg font-bold text-brand-850">Sua Parceira Digital & Administrativa</p>
+                <p class="font-light">© 2026 Todos os direitos reservados. Projetado para máxima produtividade corporativa digital.</p>
+            </div>
+        </footer>
+
+        <!-- WhatsApp Flutuante -->
+        <a
+            href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá! Gostaria de entender mais sobre seus serviços como Assistente Virtual."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="fixed bottom-6 right-6 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-600 hover:scale-105 transition-all z-40 flex items-center justify-center"
+        >
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+        </a>
+
+        <!-- Scripts de Interação -->
+        <script>
+            // Inicializar ícones Lucide
+            lucide.createIcons();
+
+            // Controle do Menu Mobile
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Calculadora de Orçamento
+            const checkboxes = document.querySelectorAll('.service-checkbox');
+            const totalPriceEl = document.getElementById('total-price');
+
+            function updatePrice() {
+                let total = 0;
+                checkboxes.forEach((box) => {
+                    if (box.checked) {
+                        total += parseInt(box.value);
+                    }
+                });
+                totalPriceEl.textContent = total;
+            }
+
+            checkboxes.forEach((box) => {
+                box.addEventListener('change', updatePrice);
+            });
+
+            // WhatsApp integrado ao orçamento customizado
+            function enviarOrcamentoWhatsApp() {
+                let servicosSelecionados = [];
+                let total = 0;
+
+                checkboxes.forEach((box) => {
+                    if (box.checked) {
+                        const label = box.nextElementSibling.querySelector('p').textContent;
+                        servicosSelecionados.push(label);
+                        total += parseInt(box.value);
+                    }
+                });
+
+                if (servicosSelecionados.length === 0) {
+                    alert('Por favor, selecione pelo menos um serviço antes de prosseguir!');
+                    return;
+                }
+
+                const mensagem =
+                    `Olá! Estive no seu site e montei o seguinte escopo de serviços de interesse:\n\n` +
+                    `💼 *Serviços Selecionados:*\n- ${servicosSelecionados.join('\n- ')}\n\n` +
+                    `📊 *Investimento estimado:* R$ ${total}/mês\n\n` +
+                    `Gostaria de agendar meu diagnóstico gratuito de 15 minutos.`;
+
+                const url = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent(mensagem)}`;
+                window.open(url, '_blank');
+            }
+
+            // Formulário de Contato
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const nome = this.querySelector('input[placeholder*="Maria"]').value;
+                const whatsapp = this.querySelector('input[placeholder*="(11)"]').value;
+                const email = this.querySelector('input[type="email"]').value;
+                const mensagemAdicional = this.querySelector('textarea').value;
+
+                let dores = [];
+                this.querySelectorAll('input[name="pain"]:checked').forEach((box) => {
+                    dores.push(box.value);
+                });
+
+                const mensagemWhats =
+                    `Olá! Acabei de enviar uma proposta de orçamento pelo site:\n\n` +
+                    `👤 *Nome:* ${nome}\n` +
+                    `📞 *WhatsApp:* ${whatsapp}\n` +
+                    `✉ *E-mail:* ${email}\n` +
+                    `🔥 *Áreas de Necessidade:* ${dores.join(', ') || 'Não especificado'}\n\n` +
+                    `💬 *Mensagem:* ${mensagemAdicional || 'Sem mensagens adicionais.'}`;
+
+                const url = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent(mensagemWhats)}`;
+                window.open(url, '_blank');
+            });
+        </script>
+    </body>
+</html>
