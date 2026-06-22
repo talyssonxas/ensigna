@@ -23,9 +23,10 @@ A **Ensigna** é uma landing page corporativa e responsiva desenvolvida sob medi
 
 ### ✒️ Autoria e Créditos
 * **Idealização do Negócio:** [Emily Albuquerque](https://www.linkedin.com/in/emilyalbuquerque/)
-* **Desenvolvimento Web & UI/UX:** [Talysson Albuquerque](https://github.com)
+* **Desenvolvimento Web & UI/UX:** [Talysson Albuquerque](https://www.linkedin.com/in/talysson-santos/)
 
 ---
+<div id="english"></div>
 
 ## 🇺🇸 English
 
@@ -46,4 +47,4 @@ A **Ensigna** é uma landing page corporativa e responsiva desenvolvida sob medi
 
 ### ✒️ Authorship & Credits
 * **Business Concept:** [Emily Albuquerque](https://www.linkedin.com/in/emilyalbuquerque/)
-* **Web Development & UI/UX:** [Talysson Albuquerque](https://github.com)
+* **Web Development & UI/UX:** [Talysson Albuquerque](https://www.linkedin.com/in/talysson-santos/)
